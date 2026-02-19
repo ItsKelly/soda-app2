@@ -1,0 +1,50 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "description": "Reference to profile"
+    },
+    "profile_email": {
+      "type": "string",
+      "description": "User email for easy lookup"
+    },
+    "profile_name": {
+      "type": "string",
+      "description": "User name for display"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "purchase",
+        "payment",
+        "adjustment"
+      ],
+      "description": "Transaction type"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Transaction amount"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "pending"
+      ],
+      "default": "pending",
+      "description": "Transaction status"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes"
+    }
+  },
+  "required": [
+    "profile_id",
+    "type",
+    "amount",
+    "status"
+  ]
+}
