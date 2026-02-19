@@ -1,0 +1,17 @@
+{
+  "name": "Inventory",
+  "type": "object",
+  "properties": {
+    "change": {
+      "type": "integer",
+      "description": "Inventory change amount (positive for additions, negative for removals)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional notes about the change"
+    }
+  },
+  "required": [
+    "change"
+  ]
+}
